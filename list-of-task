@@ -1,0 +1,739 @@
+Good. Now we’re moving into **real interview-level logic thinking** (multiple conditions, decision trees, and real-world rules).
+
+Don’t rush these — the goal is to think like a system, not just write `if`.
+
+---
+
+
+### 🧪 Example:
+
+| Input       | Output                 |
+| ----------- | ---------------------- |
+| admin, 1234 | login successful       |
+| admin, 0000 | invalid credentials    |
+| "", ""      | please fill all fields |
+
+---
+
+# 💳 TASK 2 — Bank Withdrawal Logic
+
+### 🎯 Goal:
+
+Simulate ATM withdrawal.
+
+### Inputs:
+
+* balance
+* amount
+
+### Rules:
+
+* If amount > balance → `"insufficient funds"`
+* If amount <= 0 → `"invalid amount"`
+* If valid → return `"withdrawal successful, remaining balance: X"`
+
+---
+
+
+### 🧪 Example:
+
+| Input | Output |
+| ----- | ------ |
+| 1000  | 900    |
+| 600   | 570    |
+| 200   | 200    |
+
+---
+
+# 🚦 TASK 4 — Traffic Light System
+
+### 🎯 Goal:
+
+Simulate traffic behavior.
+
+### Input:
+
+* `"red"`, `"yellow"`, `"green"`
+
+### Rules:
+
+* red → "stop"
+* yellow → "ready"
+* green → "go"
+* anything else → "invalid signal"
+
+---
+
+# 🧠 TASK 5 — Smart Number Analyzer
+
+### 🎯 Goal:
+
+Analyze a number.
+
+### Rules:
+
+Given a number:
+
+* If negative → `"negative number"`
+* If zero → `"zero"`
+* If even → `"even number"`
+* If odd → `"odd number"`
+
+⚠️ Important:
+Order matters (think carefully!)
+
+---
+
+# 🚀 YOUR CHALLENGE
+
+Pick **ANY ONE task** and implement it.
+
+Then I will:
+
+* review like a senior dev
+* point out logic mistakes (if any)
+* show you how to make it production-level clean
+
+Just reply:
+👉 **“I choose task X”**
+
+
+Excellent idea. When students see **Goal → Input → Rules → Expected Output → Examples**, they learn to think like problem solvers instead of copy-pasting code.
+
+Here's a sample set of **10 fully structured tasks** in that format. You can use the same pattern for the remaining 50.
+
+---
+
+# 🔐 TASK 1 — Login System
+
+### 🎯 Goal
+
+Build a function that validates user login credentials.
+
+### 📥 Input
+
+* `username`
+* `password`
+
+### 📌 Rules
+
+* If both fields are empty → `"please fill all fields"`
+* If username is not `"admin"` → `"user not found"`
+* If username is correct but password is wrong → `"password incorrect"`
+* If both are correct → `"login successful"`
+
+### 📤 Expected Output
+
+A message indicating the login result.
+
+### 🧪 Examples
+
+| Username | Password | Output                 |
+| -------- | -------- | ---------------------- |
+| admin    | 1234     | login successful       |
+| admin    | 0000     | password incorrect     |
+| john     | 1234     | user not found         |
+| ""       | ""       | please fill all fields |
+
+---
+
+# 💳 TASK 2 — Bank Withdrawal
+
+### 🎯 Goal
+
+Allow a user to withdraw money from their account.
+
+### 📥 Input
+
+* `balance`
+* `amount`
+
+### 📌 Rules
+
+* Amount must be greater than 0
+* Amount must not exceed balance
+* Invalid input should return an error
+
+### 📤 Expected Output
+
+Remaining balance or an error message.
+
+### 🧪 Examples
+
+| Balance | Amount | Output                                        |
+| ------- | ------ | --------------------------------------------- |
+| 1000    | 200    | withdrawal successful, remaining balance: 800 |
+| 500     | 600    | insufficient funds                            |
+| 1000    | -50    | invalid amount                                |
+| abc     | 100    | invalid input                                 |
+
+---
+
+# 🧾 TASK 3 — Discount System
+
+### 🎯 Goal
+
+Apply a discount based on purchase amount.
+
+### 📥 Input
+
+* `amount`
+
+### 📌 Rules
+
+* Amount ≥ 1000 → 10% discount
+* Amount ≥ 500 → 5% discount
+* Otherwise → no discount
+
+### 📤 Expected Output
+
+Final amount after discount.
+
+### 🧪 Examples
+
+| Amount | Output |
+| ------ | ------ |
+| 1000   | 900    |
+| 500    | 475    |
+| 2000   | 1800   |
+| 300    | 300    |
+
+---
+
+# 🚦 TASK 4 — Traffic Light System
+
+### 🎯 Goal
+
+Determine what action a driver should take.
+
+### 📥 Input
+
+* `signal`
+
+### 📌 Rules
+
+* red → stop
+* yellow → ready
+* green → go
+* anything else → invalid signal
+
+### 📤 Expected Output
+
+Driver instruction.
+
+### 🧪 Examples
+
+| Signal | Output         |
+| ------ | -------------- |
+| red    | stop           |
+| yellow | ready          |
+| green  | go             |
+| blue   | invalid signal |
+
+---
+
+# 🧠 TASK 5 — Smart Number Analyzer
+
+### 🎯 Goal
+
+Analyze a number and classify it.
+
+### 📥 Input
+
+* `number`
+
+### 📌 Rules
+
+* Negative → negative number
+* Zero → zero
+* Positive even → even number
+* Positive odd → odd number
+
+### 📤 Expected Output
+
+Classification message.
+
+### 🧪 Examples
+
+| Number | Output          |
+| ------ | --------------- |
+| -5     | negative number |
+| 0      | zero            |
+| 8      | even number     |
+| 7      | odd number      |
+
+---
+
+# 🎓 TASK 6 — Grade Calculator
+
+### 🎯 Goal
+
+Convert a score into a grade.
+
+### 📥 Input
+
+* `score`
+
+### 📌 Rules
+
+* 70–100 → A
+* 60–69 → B
+* 50–59 → C
+* 40–49 → D
+* Below 40 → F
+
+### 📤 Expected Output
+
+Student grade.
+
+### 🧪 Examples
+
+| Score | Output |
+| ----- | ------ |
+| 85    | A      |
+| 65    | B      |
+| 52    | C      |
+| 30    | F      |
+
+---
+
+# 🛒 TASK 7 — Free Shipping Checker
+
+### 🎯 Goal
+
+Determine whether an order qualifies for free shipping.
+
+### 📥 Input
+
+* `orderAmount`
+
+### 📌 Rules
+
+* Orders ≥ ₦20,000 → free shipping
+* Otherwise → shipping fee applies
+
+### 📤 Expected Output
+
+Shipping status.
+
+### 🧪 Examples
+
+| Order Amount | Output               |
+| ------------ | -------------------- |
+| 25000        | free shipping        |
+| 20000        | free shipping        |
+| 19999        | shipping fee applies |
+| 5000         | shipping fee applies |
+
+---
+
+# ⛽ TASK 8 — Fuel Purchase Calculator
+
+### 🎯 Goal
+
+Calculate the total fuel cost.
+
+### 📥 Input
+
+* `liters`
+* `pricePerLiter`
+
+### 📌 Rules
+
+* Both values must be greater than zero
+* Total = liters × pricePerLiter
+
+### 📤 Expected Output
+
+Total fuel cost.
+
+### 🧪 Examples
+
+| Liters | Price | Output        |
+| ------ | ----- | ------------- |
+| 10     | 1000  | 10000         |
+| 5      | 950   | 4750          |
+| 0      | 1000  | invalid input |
+| -2     | 1000  | invalid input |
+
+---
+
+# 🏥 TASK 9 — Hospital Triage System
+
+### 🎯 Goal
+
+Assign patient priority.
+
+### 📥 Input
+
+* `condition`
+
+### 📌 Rules
+
+* critical → immediate attention
+* serious → high priority
+* minor → normal queue
+* unknown → invalid condition
+
+### 📤 Expected Output
+
+Patient priority.
+
+### 🧪 Examples
+
+| Condition | Output              |
+| --------- | ------------------- |
+| critical  | immediate attention |
+| serious   | high priority       |
+| minor     | normal queue        |
+| headache  | invalid condition   |
+
+---
+
+# 🗳️ TASK 10 — Voting Eligibility
+
+### 🎯 Goal
+
+Determine if a person can vote.
+
+### 📥 Input
+
+* `age`
+
+### 📌 Rules
+
+* Age must be 18 or older
+* Negative ages are invalid
+
+### 📤 Expected Output
+
+Eligibility status.
+
+### 🧪 Examples
+
+| Age | Output           |
+| --- | ---------------- |
+| 25  | eligible to vote |
+| 18  | eligible to vote |
+| 17  | not eligible     |
+| -5  | invalid age      |
+
+---
+
+These structured tasks are excellent for teaching:
+
+* Validation
+* Conditional logic
+* Business rules
+* Backend thinking
+* API controller logic
+* Fintech and real-world system design
+
+If you want, I can generate **100 tasks in this exact format**, arranged from **Beginner → Intermediate → Advanced Backend Logic**.
+
+
+
+
+50 JavaScript Logic Building Tasks
+Task 1: Login System
+Goal: Build logic for Login System.
+Input: username,password
+Rules: empty->fill all fields; admin/1234 valid
+Expected Output: login result
+
+Examples:admin,1234 -> login successful admin,0000 -> password incorrectjohn,1234 -> user not found
+Task 2: Bank Withdrawal
+Goal: Build logic for Bank Withdrawal.
+Input: balance,amount
+Rules: amount>0 and <=balance
+Expected Output: remaining balance
+Examples:1000,200 -> 800500,600 -> insufficient funds1000,-5 -> invalid amount
+Task 3: Discount System
+Goal: Build logic for Discount System.
+Input: amount
+Rules: >=1000:10%, >=500:5%
+Expected Output: final amount
+Examples:1000->900600->570300->300
+Task 4: Traffic Light
+Goal: Build logic for Traffic Light.
+Input: signal
+Rules: red stop, yellow ready, green go
+Expected Output: action
+Examples:red->stopgreen->goblue->invalid
+Task 5: Number Analyzer
+Goal: Build logic for Number Analyzer.
+Input: number
+Rules: negative/zero/even/odd
+Expected Output: classification
+Examples:-5->negative0->zero8->even
+Task 6: Grade Calculator
+Goal: Build logic for Grade Calculator.
+Input: score
+Rules: A-F grading
+Expected Output: grade
+Examples:85->A65->B30->F
+Task 7: Free Shipping
+Goal: Build logic for Free Shipping.
+Input: orderAmount
+Rules: >=20000 free
+Expected Output: shipping status
+Examples:25000->free5000->fee
+Task 8: Fuel Calculator
+Goal: Build logic for Fuel Calculator.
+Input: liters,price
+Rules: multiply if valid
+Expected Output: total cost
+Examples:10,1000->10000
+Task 9: Hospital Triage
+Goal: Build logic for Hospital Triage.
+Input: condition
+Rules: critical/serious/minor
+Expected Output: priority
+Examples:critical->immediate
+Task 10: Voting Eligibility
+Goal: Build logic for Voting Eligibility.
+Input: age
+Rules: >=18
+Expected Output: eligibility
+Examples:18->eligible17->not eligible
+Task 11: Deposit System
+Goal: Build logic for Deposit System.
+Input: balance,amount
+Rules: add amount
+Expected Output: new balance
+Examples:1000,500->1500
+Task 12: Transfer Money
+Goal: Build logic for Transfer Money.
+Input: senderBalance,amount
+Rules: must have funds
+Expected Output: new balance
+Examples:1000,200->800
+Task 13: Loan Checker
+Goal: Build logic for Loan Checker.
+Input: salary,creditScore
+Rules: salary>=100000 & score>=700
+Expected Output: eligible?
+Examples:120000,720->eligible
+Task 14: ATM Limit
+Goal: Build logic for ATM Limit.
+Input: dailyTotal,amount
+Rules: max 100000/day
+Expected Output: approval
+Examples:90000,20000->denied
+Task 15: Wallet Funding
+Goal: Build logic for Wallet Funding.
+Input: amount
+Rules: minimum 100
+Expected Output: status
+Examples:50->invalid200->success
+Task 16: Transaction Fee
+Goal: Build logic for Transaction Fee.
+Input: amount
+Rules: apply fee tiers
+Expected Output: fee
+Examples:1000->fee calculated
+Task 17: Savings Goal
+Goal: Build logic for Savings Goal.
+Input: saved,goal
+Rules: compare values
+Expected Output: goal status
+Examples:1000,5000->not reached
+Task 18: Cashback
+Goal: Build logic for Cashback.
+Input: purchase
+Rules: above 5000 gets cashback
+Expected Output: cashback result
+Examples:6000->cashback
+Task 19: Fraud Check
+Goal: Build logic for Fraud Check.
+Input: amount
+Rules: >1000000 review
+Expected Output: review status
+Examples:1500000->review
+Task 20: Balance Checker
+Goal: Build logic for Balance Checker.
+Input: balance
+Rules: check positive
+Expected Output: status
+Examples:0->empty balance
+Task 21: Cart Total
+Goal: Build logic for Cart Total.
+Input: prices[]
+Rules: sum all
+Expected Output: total
+Examples:[100,200]->300
+Task 22: Coupon Validator
+Goal: Build logic for Coupon Validator.
+Input: code
+Rules: valid code only
+Expected Output: discount status
+Examples:SAVE10->valid
+Task 23: Stock Check
+Goal: Build logic for Stock Check.
+Input: stock
+Rules: must be >0
+Expected Output: availability
+Examples:0->out of stock
+Task 24: Bulk Discount
+Goal: Build logic for Bulk Discount.
+Input: quantity
+Rules: >=10 discount
+Expected Output: price status
+Examples:12->discount
+Task 25: Return Eligibility
+Goal: Build logic for Return Eligibility.
+Input: days
+Rules: <=7 days
+Expected Output: return status
+Examples:5->allowed
+Task 26: Wishlist Check
+Goal: Build logic for Wishlist Check.
+Input: product
+Rules: exists or not
+Expected Output: wishlist status
+Examples:Phone->found
+Task 27: Delivery Status
+Goal: Build logic for Delivery Status.
+Input: status
+Rules: pending/shipped/delivered
+Expected Output: message
+Examples:shipped->on the way
+Task 28: Cart Empty
+Goal: Build logic for Cart Empty.
+Input: items
+Rules: must contain item
+Expected Output: checkout status
+Examples:0 items->cannot checkout
+Task 29: Product Rating
+Goal: Build logic for Product Rating.
+Input: ratings
+Rules: average rating
+Expected Output: average
+Examples:[5,4,3]->4
+Task 30: Checkout Validation
+Goal: Build logic for Checkout Validation.
+Input: cart,payment
+Rules: both valid
+Expected Output: checkout result
+Examples:valid->success
+Task 31: Attendance Checker
+Goal: Build logic for Attendance Checker.
+Input: attendance
+Rules: >=75%
+Expected Output: exam eligibility
+Examples:80->eligible
+Task 32: Scholarship
+Goal: Build logic for Scholarship.
+Input: score
+Rules: >=85
+Expected Output: scholarship status
+Examples:90->eligible
+Task 33: Pass Checker
+Goal: Build logic for Pass Checker.
+Input: score
+Rules: >=50
+Expected Output: pass/fail
+Examples:49->fail
+Task 34: Student Promotion
+Goal: Build logic for Student Promotion.
+Input: subjects
+Rules: all passed
+Expected Output: promotion
+Examples:all pass->promoted
+Task 35: Exam Registration
+Goal: Build logic for Exam Registration.
+Input: feePaid,attendance
+Rules: both valid
+Expected Output: registration
+Examples:paid+80->approved
+Task 36: CGPA Classifier
+Goal: Build logic for CGPA Classifier.
+Input: cgpa
+Rules: class ranges
+Expected Output: degree class
+Examples:4.6->first class
+Task 37: Assignment Check
+Goal: Build logic for Assignment Check.
+Input: submissionDate
+Rules: on time or late
+Expected Output: status
+Examples:late->late
+Task 38: Class Capacity
+Goal: Build logic for Class Capacity.
+Input: capacity,current
+Rules: prevent overflow
+Expected Output: registration status
+Examples:full->denied
+Task 39: Student ID Validator
+Goal: Build logic for Student ID Validator.
+Input: id
+Rules: check format
+Expected Output: validity
+Examples:STD123->valid
+Task 40: Library Fine
+Goal: Build logic for Library Fine.
+Input: daysLate
+Rules: fine per day
+Expected Output: fine amount
+Examples:3 days->fine
+Task 41: Traffic Fine
+Goal: Build logic for Traffic Fine.
+Input: speed,limit
+Rules: speeding fined
+Expected Output: fine status
+Examples:120,100->fine
+Task 42: Electricity Bill
+Goal: Build logic for Electricity Bill.
+Input: units
+Rules: tier pricing
+Expected Output: bill
+Examples:100 units->amount
+Task 43: Movie Ticket
+Goal: Build logic for Movie Ticket.
+Input: age
+Rules: child/adult/senior
+Expected Output: ticket price
+Examples:10->child price
+Task 44: Weather Advisory
+Goal: Build logic for Weather Advisory.
+Input: weather
+Rules: give advice
+Expected Output: advice
+Examples:rain->umbrella
+Task 45: BMI Classifier
+Goal: Build logic for BMI Classifier.
+Input: weight,height
+Rules: calculate BMI
+Expected Output: category
+Examples:BMI 22->normal
+Task 46: Parking Fee
+Goal: Build logic for Parking Fee.
+Input: hours
+Rules: hourly charge
+Expected Output: fee
+Examples:3h->fee
+Task 47: Data Plan Checker
+Goal: Build logic for Data Plan Checker.
+Input: balance,cost
+Rules: enough balance
+Expected Output: purchase status
+Examples:1000,500->success
+Task 48: Ride Fare
+Goal: Build logic for Ride Fare.
+Input: distance
+Rules: distance pricing
+Expected Output: fare
+Examples:10km->fare
+Task 49: Payroll System
+Goal: Build logic for Payroll System.
+Input: salary,tax,bonus
+Rules: calculate net pay
+Expected Output: net salary
+Examples:100k-10k+5k
+Task 50: Hotel Booking
+Goal: Build logic for Hotel Booking.
+Input: room,money
+Rules: room available and enough money
+Expected Output: booking status
+Examples:available->booked
+
